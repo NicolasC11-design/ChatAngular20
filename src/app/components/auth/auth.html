@@ -31,7 +31,7 @@
 
         <!--Boton de autenticacion-->
         <div class="auth-actions">
-            <button class="google-btn" (click)="iniciarSesionConGoogle" [disabled]="autenticando"
+            <button class="google-btn" (click)="iniciarSesionConGoogle()" [disabled]="autenticando"
                 [class.loading]="autenticando">
                 @if(!autenticando){
                 <span class="google-icon">
