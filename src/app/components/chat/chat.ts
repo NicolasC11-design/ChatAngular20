@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MensajeChat } from '../../../models/chat';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-chat',
   imports: [FormsModule],
@@ -83,3 +84,4 @@ export class Chat {
     
   }
 }
+
