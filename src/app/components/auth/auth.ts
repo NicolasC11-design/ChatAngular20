@@ -20,8 +20,7 @@ export class Auth {
 
   //funcion que revisa la autenticacion - asincrona
 
-  async iniciarSesionConGoogle() { Promise<void> 
-    {
+  async iniciarSesionConGoogle(): Promise<void> {
       this.autenticando = true
       this.mensajeError=""
 
@@ -62,18 +61,19 @@ export class Auth {
         this.autenticando = false
       }
     }
+
+    /* Verificar que si el usuario ya esta autenticado se redirrecione al chat de una vez*/
+    ngOninit(): void{
+      this.authService.estaAutenticado$.subscribe( autenticado =>{
+        if(autenticado){
+          this.router.navigate(['/chat'])
+        }
+      });
+    }
+  
+
   }
   
-  /* Verificar que si el usuario ya esta autenticado se redirrecione al chat de una vez*/
-  ngOninit(): void{
-    this.authService.estaAutenticado$.subscribe( autenticado =>{
-      if(autenticado){
-        this.router.navigate(['/chat'])
-      }
-    });
-  }
-  
-}
 
 
 

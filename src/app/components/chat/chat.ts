@@ -169,7 +169,7 @@ export class Chat implements OnInit, OnDestroy, AfterViewChecked{
         hour: '2-digit',
         minute: '2-digit'
     });
-  }
+  } 
  
   async ngOnInit(): Promise<void>{
     try {
